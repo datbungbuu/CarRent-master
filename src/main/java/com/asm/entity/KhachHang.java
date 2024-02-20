@@ -20,9 +20,13 @@ public class KhachHang {
 	@Column(name = "makh")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer maKH;
+	
+	// địa chỉ email
+	@Column(name = "email", nullable = false, unique=true)
+	private String email;
 
 	// số điện thoại
-	@Column(name = "sodienthoai", nullable = false)
+	@Column(name = "sodienthoai", nullable = false, unique=true)
 	private Integer soDienThoai;
 
 	// họ của khách hàng, trong tiếng anh là first name

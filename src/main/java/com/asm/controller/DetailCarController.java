@@ -11,53 +11,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.asm.entity.HopDong;
 import com.asm.entity.Xe;
-import com.asm.service.XeService;
+import com.asm.service.impl.XeServiceImpl;
 
 @Controller
 public class DetailCarController {
 
 	@Autowired
-	XeService xeService;
+	XeServiceImpl xeService;
 	
 	// 51H-079.53
-//	@GetMapping("/search")
-//	public String search(Model model) {
-//		List<DetailCar> cars = detailCarRepository.findAll();
-//		model.addAttribute("cars", cars);
-//		return "searchCars";
-//	}
-//
-//	@GetMapping("/create")
-//	public String create(Model model, @ModelAttribute("car") DetailCar car) {
-//		model.addAttribute("car", car);
-//		return "createCar";
-//	}
-//
-//	@PostMapping("/create")
-//	public String create(@ModelAttribute("car") DetailCar car) {
-//		detailCarRepository.save(car);
-//		return "redirect:/detailcar/search";
-//	}
-//	
-//	@GetMapping("/delete")
-//	public String delete(@RequestParam("id") Integer id) {
-//		detailCarRepository.deleteById(id);
-//		return "redirect:/detailcar/search";
-//	}
-//	s
-//	@GetMapping("/edit")
-//	public String edit(Model model, @Param("id") Integer id) {
-//		@SuppressWarnings("deprecation")
-//		DetailCar car = detailCarRepository.getById(id);
-//		model.addAttribute("car", car);
-//		return "editCar";
-//	}
-//	
-//	@PostMapping("/edit")
-//	public String edit(@ModelAttribute("car") DetailCar car) {
-//		detailCarRepository.save(car);
-//		return "redirect:/detailcar/search";
-//	}
 
 	@GetMapping("detail")
 	public String detail(Model model, @RequestParam("id") String id) {
